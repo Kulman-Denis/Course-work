@@ -67,6 +67,42 @@
             background: #eaeaea;
             margin-top: 2rem;
         }
+
+        .contact-section {
+        text-align: center;
+        }
+
+        .icon-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .icon-links img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+        }
+
     </style>
 </head>
 <body>
@@ -1923,7 +1959,6 @@ hist, edges = np.histogram(hist_data, bins=30)
 hist_plot = hv.Histogram((edges, hist)).opts(
     title="Гістограма", xlabel="Значення", ylabel="Частота", color="purple")
 
-# Об'єднання всіх Holoviews графіків
 layout = (line_plot + bar_plot + scatter_plot + hist_plot).cols(2)
 bokeh_layout = renderer('bokeh').get_plot(layout).state
 html_bokeh = file_html(bokeh_layout, CDN, "Holoviews графіки")
@@ -2040,7 +2075,6 @@ x = ['1', '2', '3', '4']
 y = ['1', '2', '3', '4']
 z_values = np.array([[1, 3, 5, 7], [2, 4, 6, 8], [1, 5, 2, 7], [3, 8, 4, 6]])
 
-# Створення 3D-графіка
 fig = go.Figure()
 
 for i, x_val in enumerate(x):
@@ -2062,7 +2096,6 @@ for i, x_val in enumerate(x):
             )
         )
 
-# Налаштування графіка
 fig.update_layout(
     title="3D Гістограма",
     scene=dict(
@@ -2072,7 +2105,6 @@ fig.update_layout(
     )
 )
 
-# Відображення графіка
 fig.show()
         </code></pre>
     </article>
@@ -3061,7 +3093,7 @@ else:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
         </code></pre>
-        <h3>3. Перетворення в чорно-біле</h3>
+        <h3>3. Розмите та оригінальне зображення</h3>
         <pre><code>
 import cv2
 import os
@@ -7028,13 +7060,30 @@ print("example2_grid_wave.svg")
 
     <section id="contact" class="contact">
         <h2>Контакти</h2>
-        <p>Автор курсової роботи: <strong>Кульман Денис</strong></p>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
+        <div class="contact-section">
+            <p>Автор курсової роботи: <strong>Кульман Денис</strong></p>
+                <div class="icon-links">
+    <a href="https://t.me/Iubitel_ChaYa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png" 
+             alt="Telegram" class="icon">
+        </a>
+    <a href="https://wa.me/380663962146" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/150px-WhatsApp.svg.png" 
+             alt="WhatsApp"style="width: 64px; height: 64px;" class="icon">
+        </a>
+    <a href="https://github.com/Kulman-Denis" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+             alt="GitHub" class="icon">
+        </a>
+    <a href="https://www.linkedin.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+             alt="LinkedIn" class="icon">
+        </a>
+    </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Курсовий проєкт Дениса Кульмана</p>
+        <p>&copy; 2024-2025 Курсовий проєкт</p>
     </footer>
 </body>
 </html>
