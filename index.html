@@ -22,6 +22,10 @@
             z-index: 1000;
         }
 
+        h1 {
+            text-align: center;
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
@@ -103,8 +107,79 @@
             transform: scale(1.2);
         }
 
+        .examples-nav {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #444;
+            padding: 10px 15px;
+            border-radius: 10px 0 0 10px;
+            z-index: 1001;
+        }
+
+        .examples-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .examples-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .examples-nav ul li a:hover {
+            background: #f39c12;
+        }
+
+        h2[id] {
+            scroll-margin-top: 65px;
+        }
+
+        .example-block {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .example-text {
+            flex: 1 1 55%;
+            min-width: 300px;
+        }
+
+        .example-image {
+            flex: 1 1 40%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .example-image {
+            display: block;
+            margin: 1rem auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+
+
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -115,6 +190,22 @@
             </ul>
         </nav>
     </header>
+
+    <div class="examples-nav">
+        <ul>
+            <li><a href="#2D">2D Графіки</a></li>
+            <li><a href="#3D">3D Візуалізації</a></li>
+            <li><a href="#Dashboards">Інтерактивна графіка та дашборди</a></li>
+            <li><a href="#Computer Vision">Комп'ютерний зір і обробка зображень</a></li>
+            <li><a href="#GUI">Графічні інтерфейси користувача (GUI)</a></li>
+            <li><a href="#Visualization">Наукова візуалізація</a></li>
+            <li><a href="#Game Graphics">Графіка для ігор</a></li>
+            <li><a href="#Specialized Libraries">Спеціалізовані бібліотеки</a></li>
+            <li><a href="#Animation">Анімація</a></li>
+            <li><a href="#Other">Інші</a></li>
+        </ul>
+    </div>
+    
 
     <!-- Теорія -->
 
@@ -833,11 +924,12 @@
 <!-- Приклад -->
 
 <section id="examples" class="examples">
-    <h2>Приклади задач</h2>
-    <article>
-        <h2>Приклади 2D Графіки: Matplotlib</h2>
-        <h3>1. Побудова лінійного графіка</h3>
-        <pre><code>
+    <h2 id="2D">Приклади 2D Графіки: Matplotlib</h2>
+
+    <div class="example-block">
+        <div class="example-text">
+            <h3>1. Побудова лінійного графіка</h3>
+            <pre><code>
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -856,12 +948,15 @@ plt.legend()
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib1.png">
+        </div>
         <h3>2. Побудова гістограми</h3>
         <pre><code>
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = np.random.normal(0, 1, 1000)  # Нормальний розподіл
+data = np.random.normal(0, 1, 1000)
 
 plt.hist(data, bins=30, color="purple", edgecolor="black", alpha=0.7)
 
@@ -872,12 +967,15 @@ plt.grid(True)
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib2.png">
+        </div>
         <h3>3. Кругова діаграма</h3>
         <pre><code>
 import matplotlib.pyplot as plt
 
 labels = ["Company A", "Company B", "Company C", "Company D"]
-sizes = [30, 45, 15, 10]  # Відсотки ринку
+sizes = [30, 45, 15, 10]
 colors = ["gold", "lightblue", "lightgreen", "pink"]
 
 plt.pie(sizes, labels=labels, colors=colors, autopct="%1.1f%%", startangle=90)
@@ -885,6 +983,9 @@ plt.title("Поділ ринку між компаніями")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib3.png">
+        </div>
         <h3>4. Точкова діаграма (Scatter Plot)</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -892,8 +993,8 @@ import numpy as np
 
 x = np.random.rand(100)
 y = np.random.rand(100)
-sizes = np.random.randint(10, 200, size=100)  # Розмір точок
-colors = np.random.rand(100)  # Кольори точок
+sizes = np.random.randint(10, 200, size=100)
+colors = np.random.rand(100)
 
 plt.scatter(x, y, s=sizes, c=colors, alpha=0.5, cmap="viridis")
 plt.colorbar(label="Інтенсивність кольору")
@@ -905,6 +1006,9 @@ plt.grid(True)
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib4.png">
+        </div>
         <h3>5. Побудова кількох графіків в одному вікні</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -931,6 +1035,9 @@ plt.legend()
 plt.tight_layout()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib5.png">
+        </div>
         <h3>6. Графік теплової карти (Heatmap)</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -944,10 +1051,11 @@ plt.colorbar(label="Інтенсивність")
 plt.title("Теплова карта")
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Matplotlib6.png">
+        </div>
 
     <h2>Приклади 2D Графіки: Seaborn</h2>
-    <article>
         <h3>1. Гістограма (Histogram)</h3>
         <pre><code>
 import seaborn as sns
@@ -964,6 +1072,9 @@ plt.ylabel("Частота")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Seaborn1.png">
+        </div>
         <h3>2. Графік розсіювання (Scatter Plot)</h3>
         <pre><code>
 import seaborn as sns
@@ -985,6 +1096,9 @@ plt.ylabel("y")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Seaborn2.png">
+        </div>
         <h3>3. Парні графіки (Pairplot)</h3>
         <pre><code>
 import seaborn as sns
@@ -1003,6 +1117,9 @@ sns.pairplot(data, hue="class", palette="coolwarm")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Seaborn3.png">
+        </div>
         <h3>4. Ящик з вусами (Boxplot)</h3>
         <pre><code>
 import seaborn as sns
@@ -1023,6 +1140,9 @@ plt.ylabel("Значення")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Seaborn4.png">
+        </div>
         <h3>5. Теплова карта (Heatmap)</h3>
         <pre><code>
 import seaborn as sns
@@ -1039,6 +1159,9 @@ plt.ylabel("Y")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Seaborn5.png">
+        </div>
         <h3>6. Лінійна регресія (Regression Plot)</h3>
         <pre><code>
 import seaborn as sns
@@ -1058,6 +1181,9 @@ plt.ylabel("y")
 
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Seaborn6.png">
+        </div>
         <h3>7. Категоріальні дані (Bar Plot)</h3>
         <pre><code>
 import seaborn as sns
@@ -1076,14 +1202,15 @@ sns.barplot(data=data, x="group", y="value", hue="hue", dodge=False, palette="Bl
 plt.title("Стовпчиковий графік")
 plt.xlabel("Група")
 plt.ylabel("Значення")
-plt.legend([], [], frameon=False)  # Вимикаємо легенду
+plt.legend([], [], frameon=False)
 
 plt.show()
         </code></pre>
-        </article>
+        <div class="example-image">
+            <img src="images/Seaborn7.png">
+        </div>
 
-            <h2>Приклади 2D Графіки: Plotly</h2>
-        <article>
+        <h2>Приклади 2D Графіки: Plotly</h2>
         <h3>1. Лінійний графік</h3>
         <pre><code>
 import plotly.graph_objects as go
@@ -1097,6 +1224,9 @@ fig.update_layout(title="Лінійний графік", xaxis_title="x", yaxis_
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly1.jpg">
+        </div>
         <h3>2. Графік розсіювання (Scatter Plot)</h3>
         <pre><code>
 import plotly.express as px
@@ -1121,6 +1251,9 @@ fig = px.scatter(
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly2.jpg">
+        </div>
         <h3>3. Стовпчиковий графік (Bar Chart)</h3>
         <pre><code>
 import plotly.express as px
@@ -1136,6 +1269,9 @@ fig.update_traces(textposition='outside')
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly3.jpg">
+        </div>
         <h3>4. Теплова карта (Heatmap)</h3>
         <pre><code>
 import plotly.graph_objects as go
@@ -1151,6 +1287,9 @@ fig.update_layout(title="Теплова карта", xaxis_title="X", yaxis_titl
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly4.jpg">
+        </div>
         <h3>5. Boxplot (Ящик з вусами)</h3>
         <pre><code>
 import plotly.express as px
@@ -1163,10 +1302,13 @@ data = pd.DataFrame({
 })
 
 fig = px.box(data, x="group", y="value", title="Boxplot для груп")
-fig.update_traces(boxmean='sd')  # Додати середнє та стандартне відхилення
+fig.update_traces(boxmean='sd')
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly5.jpg">
+        </div>
         <h3>6. Лінійна регресія</h3>
         <pre><code>
 import plotly.express as px
@@ -1182,6 +1324,9 @@ fig.update_traces(marker=dict(size=6))
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly6.jpg">
+        </div>
         <h3>7. Кільцевий графік (Pie / Donut Chart)</h3>
         <pre><code>
 import plotly.express as px
@@ -1196,6 +1341,9 @@ fig = px.pie(data, names="category", values="value", title="Кільцевий �
 
 fig.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly7.jpg">
+        </div>
         <h3>8. Підграфіки (Subplots)</h3>
         <pre><code>
 from plotly.subplots import make_subplots
@@ -1214,10 +1362,11 @@ fig.add_trace(go.Scatter(x=x, y=y2, mode="lines", name="cos(x)"), row=1, col=2)
 fig.update_layout(title="Підграфіки")
 fig.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Plotly8.jpg">
+        </div>
         
     <h2>Приклади 2D Графіки: Bokeh</h2>
-    <article>
         <h3>1. Лінійний графік</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1231,6 +1380,9 @@ p.line(x, y, legend_label="y = x^2", line_width=2)
 
 show(p)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Bokeh1.png">
+        </div>
         <h3>2. Графік розсіювання (Scatter Plot)</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1250,6 +1402,9 @@ p.add_tools(hover)
 
 show(p)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Bokeh2.jpg">
+        </div>
         <h3>3. Стовпчиковий графік (Bar Chart)</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1263,6 +1418,9 @@ p.vbar(x=groups, top=values, width=0.5, color="skyblue")
 
 show(p)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Bokeh3.png">
+        </div>
         <h3>4. Теплова карта (Heatmap)</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1280,6 +1438,9 @@ p.add_layout(color_bar, 'right')
 
 show(p)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Bokeh4.png">
+        </div>
         <h3>5. Boxplot (Ящик з вусами)</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1314,6 +1475,9 @@ p.vbar(x="groups", top="q2", bottom="q2", width=0.7, source=source, line_color="
 output_file("boxplot.html")
 show(p)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Bokeh5.png">
+        </div>
         <h3>6. Лінійна регресія</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1331,6 +1495,9 @@ p.line(x, regression_line, color="red", line_width=2, legend_label="Лінія �
 
 show(p)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Bokeh6.png">
+        </div>
         <h3>7. Кільцевий графік (Donut Chart)</h3>
         <pre><code>
 from bokeh.plotting import figure, show
@@ -1351,10 +1518,11 @@ p.wedge(x=0, y=1, radius=0.4, start_angle=cumsum('angle', include_zero=True), en
 
 show(p)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Bokeh7.jpg">
+        </div>
     
     <h2>Приклади 2D Графіки: ggplot</h2>
-    <article>
         <h3>1. Лінійний графік (Line Plot)</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_line, ggtitle
@@ -1372,6 +1540,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot1.png">
+        </div>
         <h3>2. Графік розсіювання (Scatter Plot)</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_point, ggtitle
@@ -1390,6 +1561,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot2.png">
+        </div>
         <h3>3. Стовпчиковий графік (Bar Plot)</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_bar, ggtitle
@@ -1408,6 +1582,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot3.png">
+        </div>
         <h3>4. Гістограма</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_histogram, ggtitle
@@ -1424,6 +1601,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot4.png">
+        </div>
         <h3>5. Boxplot (Ящик з вусами)</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_boxplot, ggtitle
@@ -1442,6 +1622,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot5.png">
+        </div>
         <h3>6. Лінійна регресія</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_point, geom_smooth, ggtitle
@@ -1461,6 +1644,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot6.png">
+        </div>
         <h3>7. Теплова карта (Heatmap)</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_tile, ggtitle
@@ -1480,6 +1666,9 @@ plot = (
 
 plot.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/ggplot7.png">
+        </div>
         <h3>8. Фасетний графік (Facet Grid)</h3>
         <pre><code>
 from plotnine import ggplot, aes, geom_point, facet_wrap, ggtitle
@@ -1500,7 +1689,9 @@ plot = (
 
 plot.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/ggplot8.png">
+        </div>
     
     <h2>Приклади 2D Графіки: Altair</h2>
     <article>
@@ -1523,6 +1714,9 @@ chart = alt.Chart(data).mark_line().encode(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair1.png">
+        </div>
         <h3>2. Графік розсіювання (Scatter Plot)</h3>
         <pre><code>
 import altair as alt
@@ -1545,6 +1739,9 @@ chart = alt.Chart(data).mark_circle(size=100).encode(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair2.png">
+        </div>
         <h3>3. Стовпчиковий графік (Bar Plot)</h3>
         <pre><code>
 import altair as alt
@@ -1565,6 +1762,9 @@ chart = alt.Chart(data).mark_bar().encode(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair3.png">
+        </div>
         <h3>4. Гістограма</h3>
         <pre><code>
 import altair as alt
@@ -1584,6 +1784,9 @@ chart = alt.Chart(data).mark_bar().encode(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair4.png">
+        </div>
         <h3>5. Boxplot (Ящик з вусами)</h3>
         <pre><code>
 import altair as alt
@@ -1603,6 +1806,9 @@ chart = alt.Chart(data).mark_boxplot().encode(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair5.png">
+        </div>
         <h3>6. Лінійна регресія</h3>
         <pre><code>
 import altair as alt
@@ -1626,6 +1832,9 @@ chart = (base + line).properties(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair6.png">
+        </div>
         <h3>7. Теплова карта (Heatmap)</h3>
         <pre><code>
 import altair as alt
@@ -1647,6 +1856,9 @@ chart = alt.Chart(data).mark_rect().encode(
 
 chart.save("chart.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Altair7.png">
+        </div>
         <h3>8. Фасетний графік (Facet Grid)</h3>
         <pre><code>
 import altair as alt
@@ -1669,7 +1881,9 @@ chart = alt.Chart(data).mark_point().encode(
 
 chart.save("chart.html")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Altair8.png">
+        </div>
     
     <h2>Приклади 2D Графіки: Chartify</h2>
     <article>
@@ -1696,6 +1910,9 @@ ch.axes.set_yaxis_label("Значення")
 
 ch.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Chartify1.png">
+        </div>
         <h3>2. Графік розсіювання (Scatter Plot)</h3>
         <pre><code>
 import chartify
@@ -1719,6 +1936,9 @@ ch.axes.set_yaxis_label("Y-значення")
 
 ch.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Chartify2.png">
+        </div>
         <h3>3. Стовпчиковий графік (Bar Plot)</h3>
         <pre><code>
 import chartify
@@ -1742,6 +1962,9 @@ ch.axes.set_yaxis_label("Значення")
 
 ch.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Chartify3.png">
+        </div>
         <h3>4. Гістограма (Histogram)</h3>
         <pre><code>
 import chartify
@@ -1773,10 +1996,13 @@ ch.set_title("Гістограма")
 ch.axes.set_xaxis_label("Значення")
 ch.axes.set_yaxis_label("Частота")
 
-ch.axes.set_xaxis_tick_orientation('vertical')  # Вертикальні мітки
+ch.axes.set_xaxis_tick_orientation('vertical')
 
 ch.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Chartify4.png">
+        </div>
         <h3>5. Теплова карта (Heatmap)</h3>
         <pre><code>
 import chartify
@@ -1803,10 +2029,11 @@ ch.axes.set_yaxis_label("Y Категорія")
 
 ch.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Chartify5.png">
+        </div>
 
     <h2>Приклади 2D Графіки: Pygal</h2>
-    <article>
         <h3>1. Лінійний графік (Line Chart)</h3>
         <pre><code>
 import pygal
@@ -1817,6 +2044,9 @@ line_chart.add('Продукт A', [10, 20, 15, 30, 25])
 line_chart.add('Продукт B', [15, 10, 20, 25, 30])
 line_chart.render_to_file('line_chart.svg')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pygal1.jpg">
+        </div>
         <h3>2. Стовпчиковий графік (Bar Chart)</h3>
         <pre><code>
 import pygal
@@ -1826,6 +2056,9 @@ bar_chart.x_labels = ['Січень', 'Лютий', 'Березень', 'Кві�
 bar_chart.add('Продажі', [5, 15, 10, 25, 20])
 bar_chart.render_to_file('bar_chart.svg')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pygal2.jpg">
+        </div>
         <h3>3. Гістограма (Histogram)</h3>
         <pre><code>
 import pygal
@@ -1847,6 +2080,9 @@ hist_chart.add('Оцінки', [
 
 hist_chart.render_to_file('histogram.svg')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pygal3.jpg">
+        </div>
         <h3>4. Точковий графік (Scatter Plot)</h3>
         <pre><code>
 import pygal
@@ -1855,10 +2091,11 @@ scatter_chart = pygal.XY(title="Точковий графік")
 scatter_chart.add('Точки', [(1, 1), (2, 4), (3, 9), (4, 16)])
 scatter_chart.render_to_file('scatter_chart.svg')
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Pygal4.jpg">
+        </div>
 
     <h2>Приклади 2D Графіки: Pandas Visualization</h2>
-    <article>
         <h3>1. Лінійний графік (Line Chart)</h3>
         <pre><code>
 import pandas as pd
@@ -1877,6 +2114,9 @@ plt.ylabel("Продажі")
 plt.grid(True)
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pandas Visualization1.png">
+        </div>
         <h3>2. Стовпчиковий графік (Bar Chart)</h3>
         <pre><code>
 df.plot(x="Місяць", y=["Продажі A", "Продажі B"], kind="bar", title="Стовпчиковий графік")
@@ -1884,13 +2124,19 @@ plt.ylabel("Продажі")
 plt.grid(axis='y')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pandas Visualization2.png">
+        </div>
         <h3>3. Кругова діаграма (Pie Chart)</h3>
         <pre><code>
 df_sum = df[["Продажі A", "Продажі B"]].sum()
 df_sum.plot(kind="pie", autopct="%.1f%%", title="Розподіл продажів A та B")
-plt.ylabel("")  # Прибираємо підпис осі
+plt.ylabel("")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pandas Visualization3.png">
+        </div>
         <h3>4. Точковий графік (Scatter Plot)</h3>
         <pre><code>
 df.plot(x="Продажі A", y="Продажі B", kind="scatter", title="Точковий графік")
@@ -1899,6 +2145,9 @@ plt.ylabel("Продажі B")
 plt.grid(True)
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pandas Visualization4.png">
+        </div>
         <h3>5. Гістограма (Histogram)</h3>
         <pre><code>
 random_data = pd.Series(np.random.normal(0, 1, 1000))  
@@ -1907,10 +2156,11 @@ plt.xlabel("Значення")
 plt.grid(True)
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Pandas Visualization5.png">
+        </div>
 
     <h2>Приклади 2D Графіки: Holoviews</h2>
-    <article>
         <h3>1. Лінійний графік (Line Chart)</h3>
         <pre><code>
 import holoviews as hv
@@ -1927,16 +2177,46 @@ x = np.linspace(0, 10, 100)
 y = np.sin(x)
 line_plot = hv.Curve((x, y), "x", "y").opts(
     title="Лінійний графік", xlabel="Час", ylabel="Амплітуда", color="blue")
+
+html_output = file_html(hv.render(line_plot), CDN, "Holoviews.html")
+
+with open("Holoviews.html", "w") as f:
+    f.write(html_output)
+
+print("Holoviews.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Holoviews1.png">
+        </div>
         <h3>2. Стовпчиковий графік (Bar Chart)</h3>
         <pre><code>
+import holoviews as hv
+import numpy as np
+import pandas as pd
+from bokeh.resources import CDN
+from bokeh.embed import file_html
+from holoviews import renderer
+import plotly.graph_objects as go
+
+hv.extension('bokeh')
+
 bar_data = pd.DataFrame({
     "Категорія": ["A", "B", "C", "D"],
     "Значення": [10, 20, 15, 25]
 })
 bar_plot = hv.Bars(bar_data, kdims=["Категорія"], vdims=["Значення"]).opts(
     title="Стовпчиковий графік", color="orange", xlabel="Категорії", ylabel="Значення")
+
+html_output = file_html(hv.render(bar_plot), CDN, "Holoviews.html")
+
+with open("Holoviews.html", "w") as f:
+    f.write(html_output)
+
+print("Holoviews.html")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Holoviews2.png">
+        </div>
         <h3>3. Точковий графік (Scatter Plot)</h3>
         <pre><code>
 x_scatter = np.random.randn(100)
@@ -1944,36 +2224,11 @@ y_scatter = np.random.randn(100)
 scatter_plot = hv.Scatter((x_scatter, y_scatter), "x", "y").opts(
     title="Точковий графік", size=8, color="green", xlabel="X", ylabel="Y")
         </code></pre>
-        <h3>4. Кругова діаграма (Pie Chart)</h3>
-        <pre><code>
-pie_labels = ["A", "B", "C"]
-pie_values = [30, 20, 50]
-
-pie_fig = go.Figure(data=[go.Pie(labels=pie_labels, values=pie_values)])
-pie_fig.update_layout(title_text="Кругова діаграма")
-        </code></pre>
-        <h3>5. Гістограма (Histogram)</h3>
-        <pre><code>
-hist_data = np.random.normal(size=1000)
-hist, edges = np.histogram(hist_data, bins=30)
-hist_plot = hv.Histogram((edges, hist)).opts(
-    title="Гістограма", xlabel="Значення", ylabel="Частота", color="purple")
-
-layout = (line_plot + bar_plot + scatter_plot + hist_plot).cols(2)
-bokeh_layout = renderer('bokeh').get_plot(layout).state
-html_bokeh = file_html(bokeh_layout, CDN, "Holoviews графіки")
-
-html_plotly = pie_fig.to_html(full_html=False, include_plotlyjs='cdn')
-
-final_html = html_bokeh.replace('</body>', f'{html_plotly}</body>')
-
-with open("output.html", "w", encoding='utf-8') as f:
-    f.write(final_html)
-        </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Holoviews3.png">
+        </div>
 
     <h2>Приклади 2D Графіки: mplfinance</h2>
-    <article>
         <h3>1. Свічковий графік (Candlestick)</h3>
         <pre><code>
 import mplfinance as mpf
@@ -1993,28 +2248,41 @@ df = pd.DataFrame(data, index=dates)
 
 mpf.plot(df, type="candle", title="Свічковий графік", style="yahoo", volume=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/mplfinance1.png">
+        </div>
         <h3>2. OHLC графік (Open-High-Low-Close)</h3>
         <pre><code>
 mpf.plot(df, type="ohlc", title="OHLC графік", style="default")
         </code></pre>
+        <div class="example-image">
+            <img src="images/mplfinance2.png">
+        </div>
         <h3>3. Лінійний графік</h3>
         <pre><code>
 mpf.plot(df, type="line", title="Лінійний графік цін", style="charles", ylabel="Ціна")
         </code></pre>
+        <div class="example-image">
+            <img src="images/mplfinance3.png">
+        </div>
         <h3>4. Свічковий графік з EMA та SMA</h3>
         <pre><code>
 add_ema = mpf.make_addplot(df["Close"].rolling(window=5).mean(), color="blue", label="EMA (5)")
 add_sma = mpf.make_addplot(df["Close"].rolling(window=10).mean(), color="orange", label="SMA (10)")
 mpf.plot(df, type="candle", title="Свічковий графік з EMA та SMA", style="yahoo", addplot=[add_ema, add_sma], volume=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/mplfinance4.png">
+        </div>
         <h3>5. Спрощений графік об'ємів</h3>
         <pre><code>
 mpf.plot(df, type="line", title="Об'єми торгів", style="classic", ylabel="Об'єми", volume=True)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/mplfinance5.png">
+        </div>
 
-    <h2>Приклади 3D Візуалізації: Plotly (3D)</h2>
-    <article>
+    <h2 id="3D">Приклади 3D Візуалізації: Plotly (3D)</h2>
         <h3>1. 3D Точка (Scatter 3D)</h3>
         <pre><code>
 import plotly.graph_objects as go
@@ -2030,6 +2298,9 @@ scatter_3d = go.Figure(
 scatter_3d.update_layout(title="3D Точки", scene=dict(xaxis_title="X", yaxis_title="Y", zaxis_title="Z"))
 scatter_3d.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly 3D1.jpg">
+        </div>
         <h3>2. 3D Поверхня (Surface)</h3>
         <pre><code>
 x = np.linspace(-10, 10, 50)
@@ -2043,6 +2314,9 @@ surface_3d = go.Figure(
 surface_3d.update_layout(title="3D Поверхня", scene=dict(xaxis_title="X", yaxis_title="Y", zaxis_title="Z"))
 surface_3d.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly 3D2.jpg">
+        </div>
         <h3>3. 3D Лінія (Line 3D)</h3>
         <pre><code>
 t = np.linspace(0, 4 * np.pi, 100)
@@ -2056,6 +2330,9 @@ line_3d = go.Figure(
 line_3d.update_layout(title="3D Лінія", scene=dict(xaxis_title="X", yaxis_title="Y", zaxis_title="Z"))
 line_3d.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly 3D3.jpg">
+        </div>
         <h3>4. 3D Стрічка (Ribbon 3D)</h3>
         <pre><code>
 x = np.linspace(0, 1, 50)
@@ -2069,6 +2346,9 @@ ribbon_3d = go.Figure(
 ribbon_3d.update_layout(title="3D Стрічка", scene=dict(xaxis_title="X", yaxis_title="Y", zaxis_title="Z"))
 ribbon_3d.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Plotly 3D4.jpg">
+        </div>
         <h3>5. 3D Гістограма (Bar 3D)</h3>
         <pre><code>
 x = ['1', '2', '3', '4']
@@ -2107,10 +2387,11 @@ fig.update_layout(
 
 fig.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Plotly 3D5.jpg">
+        </div>
 
     <h2>Приклади 3D Візуалізації: Mayavi</h2>
-    <article>
         <h3>1. 3D Точки (Scatter 3D)</h3>
         <pre><code>
 from mayavi import mlab
@@ -2127,6 +2408,9 @@ scatter = mlab.points3d(x, y, z, s, scale_factor=0.3, colormap="coolwarm")
 
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi1.png">
+        </div>
         <h3>2. 3D Поверхня (Surface)</h3>
         <pre><code>
 X, Y = np.mgrid[-3:3:100j, -3:3:100j]
@@ -2135,6 +2419,9 @@ surface = mlab.surf(X, Y, Z, colormap='coolwarm')
 mlab.colorbar(surface, title="Значення Z", orientation='vertical')
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi2.png">
+        </div>
         <h3>3. 3D Лінія (Line 3D)</h3>
         <pre><code>
 t = np.linspace(0, 4 * np.pi, 100)
@@ -2144,6 +2431,9 @@ z = t / np.pi
 line = mlab.plot3d(x, y, z, t, tube_radius=0.05, colormap="plasma")
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi3.png">
+        </div>
         <h3>4. 3D Стрічка (Ribbon 3D)</h3>
         <pre><code>
 x = np.linspace(-5, 5, 50)
@@ -2152,6 +2442,9 @@ z = np.zeros_like(x)
 ribbon = mlab.mesh(np.array([x, x]), np.array([y, y + 1]), np.array([z, z + 1]), colormap="viridis")
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi4.png">
+        </div>
         <h3>5. 3D Гістограма (Bar 3D)</h3>
         <pre><code>
 x, y = np.mgrid[-4:4:10j, -4:4:10j]
@@ -2159,10 +2452,11 @@ z = np.random.rand(*x.shape) * 5
 bars = mlab.barchart(x.flatten(), y.flatten(), z.flatten(), color=(0, 0.5, 1))
 mlab.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Mayavi5.png">
+        </div>
 
     <h2>Приклади 3D Візуалізації: VisPy</h2>
-    <article>
         <h3>1. 3D Точки (Scatter 3D)</h3>
         <pre><code>
 import numpy as np
@@ -2179,6 +2473,9 @@ scatter = scene.visuals.Markers(pos=scatter_data, edge_color='blue', face_color=
 if __name__ == '__main__':
     app.run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/VisPy1.jpg">
+        </div>
         <h3>2. 3D Поверхня (Surface)</h3>
         <pre><code>
 x = np.linspace(-10, 10, 50)
@@ -2187,6 +2484,9 @@ x, y = np.meshgrid(x, y)
 z = np.sin(0.5 * x) * np.cos(0.5 * y)
 surface = scene.visuals.SurfacePlot(x=x, y=y, z=z, shading='smooth', color=(0.3, 0.5, 0.8, 1), parent=view.scene)
         </code></pre>
+        <div class="example-image">
+            <img src="images/VisPy2.jpg">
+        </div>
         <h3>3. 3D Лінія (Line 3D)</h3>
         <pre><code>
 n = 100
@@ -2198,8 +2498,10 @@ z = t
 line_data = np.column_stack((x, y, z))
 
 line = scene.visuals.Line(pos=line_data, color='lime', width=2, parent=view.scene)
-
         </code></pre>
+        <div class="example-image">
+            <img src="images/VisPy3.jpg">
+        </div>
         <h3>4. 3D Стрічка (Ribbon 3D)</h3>
         <pre><code>
 t = np.linspace(0, 4*np.pi, 100)
@@ -2208,8 +2510,10 @@ y_ribbon = np.cos(t) * 10
 z_ribbon = t
 ribbon_data = np.c_[x_ribbon, y_ribbon, z_ribbon]
 ribbon = scene.visuals.Tube(points=ribbon_data, radius=0.5, color='green', parent=view.scene)
-
         </code></pre>
+        <div class="example-image">
+            <img src="images/VisPy4.jpg">
+        </div>
         <h3>5. 3D Гістограма (Bar 3D)</h3>
         <pre><code>
 import numpy as np
@@ -2236,7 +2540,9 @@ for i in range(x_bins):
 if __name__ == '__main__':
     app.run()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/VisPy5.jpg">
+        </div>
 
     <h2>Приклади 3D Візуалізації: VTK</h2>
     <article>
@@ -2275,6 +2581,9 @@ renderer.SetBackground(0.1, 0.1, 0.2)
 render_window.Render()
 interactor.Start()
         </code></pre>
+        <div class="example-image">
+            <img src="images/VTK1.jpg">
+        </div>
         <h3>2. 3D Поверхня (Surface)</h3>
         <pre><code>
 import vtk
@@ -2326,6 +2635,9 @@ interactor.SetRenderWindow(render_window)
 render_window.Render()
 interactor.Start()
         </code></pre>
+        <div class="example-image">
+            <img src="images/VTK2.jpg">
+        </div>
         <h3>3. 3D Лінія (Line 3D)</h3>
         <pre><code>
 import vtk
@@ -2365,6 +2677,9 @@ interactor.SetRenderWindow(render_window)
 render_window.Render()
 interactor.Start()
         </code></pre>
+        <div class="example-image">
+            <img src="images/VTK3.jpg">
+        </div>
         <h3>4. 3D Стрічка (Ribbon 3D)</h3>
         <pre><code>
 import vtk
@@ -2413,6 +2728,9 @@ interactor.SetRenderWindow(render_window)
 render_window.Render()
 interactor.Start()
         </code></pre>
+        <div class="example-image">
+            <img src="images/VTK4.jpg">
+        </div>
         <h3>5. 3D Гістограма (Bar 3D)</h3>
         <pre><code>
 import vtk
@@ -2454,7 +2772,9 @@ interactor.SetRenderWindow(render_window)
 render_window.Render()
 interactor.Start()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/VTK5.jpg">
+        </div>
 
     <h2>Приклади 3D Візуалізації: Matplotlib (3D)</h2>
     <article>
@@ -2473,6 +2793,9 @@ z = np.random.rand(50)
 ax1.scatter(x, y, z, c='r', marker='o')
 ax1.set_title('3D Точка (Scatter)')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib 3D1.jpg">
+        </div>
         <h3>2. 3D Поверхня (Surface)</h3>
         <pre><code>
 ax2 = fig.add_subplot(232, projection='3d')
@@ -2483,6 +2806,9 @@ Z = np.sin(np.sqrt(X**2 + Y**2))
 ax2.plot_surface(X, Y, Z, cmap='viridis')
 ax2.set_title('3D Поверхня (Surface)')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib 3D2.jpg">
+        </div>
         <h3>3. 3D Лінія (Line 3D)</h3>
         <pre><code>
 ax3 = fig.add_subplot(233, projection='3d')
@@ -2492,6 +2818,9 @@ y_line = np.cos(z_line)
 ax3.plot3D(x_line, y_line, z_line, color='g')
 ax3.set_title('3D Лінія (Line)')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib 3D3.jpg">
+        </div>
         <h3>4. 3D Стрічка (Ribbon 3D)</h3>
         <pre><code>
 ax4 = fig.add_subplot(234, projection='3d')
@@ -2507,6 +2836,9 @@ for i in range(len(z_ribbon)-1):
     ax4.plot(xs, ys, zs, color='orange')
 ax4.set_title('3D Стрічка (Ribbon)')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib 3D4.jpg">
+        </div>
         <h3>5. 3D Гістограма (Bar 3D)</h3>
         <pre><code>
 ax5 = fig.add_subplot(235, projection='3d')
@@ -2524,10 +2856,11 @@ plt.tight_layout()
 plt.savefig("3D_visualizations.png")
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Matplotlib 3D5.jpg">
+        </div>
 
     <h2>Приклади 3D Візуалізації: PyVista</h2>
-    <article>
         <h3>1. 3D Точка (Scatter 3D)</h3>
         <pre><code>
 import pyvista as pv
@@ -2539,6 +2872,9 @@ points = np.random.rand(50, 3) * 10
 point_cloud = pv.PolyData(points)
 plotter.add_mesh(point_cloud, color="red", point_size=10, render_points_as_spheres=True, label="3D Scatter")
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyVista1.jpg">
+        </div>
         <h3>2. 3D Поверхня (Surface)</h3>
         <pre><code>
 x = np.linspace(-5, 5, 50)
@@ -2548,12 +2884,18 @@ z = np.sin(np.sqrt(x**2 + y**2))
 surface = pv.StructuredGrid(x, y, z)
 plotter.add_mesh(surface, cmap="viridis", label="3D Surface")
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyVista2.jpg">
+        </div>
         <h3>3. 3D Лінія (Line 3D)</h3>
         <pre><code>
 line_points = np.array([[i, np.sin(i), np.cos(i)] for i in np.linspace(0, 10, 100)])
 line = pv.Spline(line_points, 100)
 plotter.add_mesh(line, color="blue", line_width=3, label="3D Line")
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyVista3.jpg">
+        </div>
         <h3>4. 3D Стрічка (Ribbon 3D)</h3>
         <pre><code>
 ribbon_points = np.array([[i, np.sin(i), 0] for i in np.linspace(0, 10, 100)])
@@ -2561,6 +2903,9 @@ spline = pv.Spline(ribbon_points, 100)
 ribbon = spline.ribbon(normal=(0, 0, 1), width=1.0)
 plotter.add_mesh(ribbon, color="magenta", label="3D Ribbon")
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyVista4.jpg">
+        </div>
         <h3>5. 3D Гістограма (Bar 3D)</h3>
         <pre><code>
 x = np.arange(5)
@@ -2578,9 +2923,11 @@ for i in range(5):
 plotter.add_legend()
 plotter.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/PyVista5.jpg">
+        </div>
 
-    <h2>Приклади Інтерактивної Графіки та Дашбордів: Dash</h2>
+    <h2 id="Dashboards">Приклади Інтерактивної Графіки та Дашбордів: Dash</h2>
     <article>
         <h3>1. Лінійний графік з вибором країни</h3>
         <pre><code>
@@ -2618,6 +2965,9 @@ def update_graph(selected_country):
 if __name__ == '__main__':
     app.run(debug=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Dash1.jpg">
+        </div>
         <h3>2. Стовпчиковий графік населення по континентах</h3>
         <pre><code>
 import dash
@@ -2638,6 +2988,9 @@ app.layout = html.Div([
 if __name__ == '__main__':
     app.run(debug=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Dash2.jpg">
+        </div>
         <h3>3. Кругова діаграма (Pie Chart)</h3>
         <pre><code>
 import dash
@@ -2656,6 +3009,9 @@ app.layout = html.Div([
 if __name__ == '__main__':
     app.run(debug=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Dash3.jpg">
+        </div>
         <h3>4. Кореляційна діаграма (Scatter Plot)</h3>
         <pre><code>
 import dash
@@ -2675,6 +3031,9 @@ app.layout = html.Div([
 if __name__ == '__main__':
     app.run(debug=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Dash4.jpg">
+        </div>
         <h3>5. Інтерактивна гістограма з вибором стовпців</h3>
         <pre><code>
 import dash
@@ -2707,10 +3066,11 @@ def update_hist(column):
 if __name__ == '__main__':
     app.run(debug=True)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Dash5.jpg">
+        </div>
 
     <h2>Приклади Інтерактивної Графіки та Дашбордів: Panel</h2>
-    <article>
         <h3>1. Інтерактивний слайдер для синусоїди</h3>
         <pre><code>
 import numpy as np
@@ -2732,6 +3092,9 @@ interactive_plot = pn.bind(plot, freq=slider)
 
 pn.Column(slider, interactive_plot).show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Panel1.jpg">
+        </div>
         <h3>2. Дропдаун + гістограма (Seaborn)</h3>
         <pre><code>
 import seaborn as sns
@@ -2752,6 +3115,9 @@ hist = pn.bind(plot, column=dropdown)
 
 pn.Column(dropdown, hist).servable().show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Panel2.jpg">
+        </div>
         <h3>3. Вкладки з різними графіками</h3>
         <pre><code>
 import panel as pn
@@ -2772,6 +3138,9 @@ tabs = pn.Tabs(
 
 tabs.servable().show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Panel3.jpg">
+        </div>
         <h3>4. Інтерактивний DataFrame</h3>
         <pre><code>
 import panel as pn
@@ -2784,6 +3153,9 @@ data_table = pn.widgets.DataFrame(df, name="Таблиця", width=400, height=3
 
 pn.Column("# Інтерактивна таблиця", data_table).servable().show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Panel4.jpg">
+        </div>
         <h3>5. Графік з вибором Plotly</h3>
         <pre><code>
 import panel as pn
@@ -2801,11 +3173,12 @@ dropdown = pn.widgets.Select(name='Ознака', options=list(df.columns))
 plot = pn.bind(create_plot, column=dropdown)
 
 pn.Column("# Plotly інтерактивна гістограма", dropdown, plot).show()
-       </code></pre>
-    </article>
+        </code></pre>
+    <div class="example-image">
+        <img src="images/Panel5.jpg">
+    </div>
 
     <h2>Приклади Інтерактивної Графіки та Дашбордів: Streamlit</h2>
-    <article>
         <h3>1. ВВП на душу населення у вибраній країні</h3>
         <pre><code>
 import streamlit as st
@@ -2845,6 +3218,9 @@ fig.update_traces(line=dict(color="royalblue", width=3), marker=dict(size=8, col
 
 st.plotly_chart(fig, use_container_width=True)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Streamlit1.jpg">
+        </div>
         <h3>2. Слайдер для побудови графіка y = A * sin(x)</h3>
         <pre><code>
 import streamlit as st
@@ -2863,6 +3239,9 @@ ax.set_title("y = A * sin(x)")
 
 st.pyplot(fig)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Streamlit2.jpg">
+        </div>
         <h3>3. Інтерактивна гістограма з вибором стовпця</h3>
         <pre><code>
 import streamlit as st
@@ -2878,6 +3257,9 @@ fig, ax = plt.subplots()
 sns.histplot(df[column], bins=20, kde=True, ax=ax)
 st.pyplot(fig)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Streamlit3.jpg">
+        </div>
         <h3>4. Віджет для введення тексту + виведення</h3>
         <pre><code>
 import streamlit as st
@@ -2888,6 +3270,9 @@ name = st.text_input("Введи своє ім’я")
 if name:
     st.success(f"Привіт, {name}!")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Streamlit4.jpg">
+        </div>
         <h3>5. Dash-like інтерактивний дашборд</h3>
         <pre><code>
 import streamlit as st
@@ -2911,10 +3296,11 @@ with col2:
                      log_x=True, size_max=60)
     st.plotly_chart(fig, use_container_width=True)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Streamlit5.jpg">
+        </div>
 
     <h2>Приклади Інтерактивної Графіки та Дашбордів: Shiny for Python</h2>
-    <article>
         <h3>1. Інтерактивна лінійна діаграма з matplotlib</h3>
         <pre><code>
 from shiny import App, render, ui, reactive
@@ -2962,6 +3348,9 @@ def server(input, output, session):
 
 app = App(app_ui, server)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Shiny1.jpg">
+        </div>
         <h3>2. Інтерактивний слайдер з відображенням синуса</h3>
         <pre><code>
 from shiny import App, ui, render, reactive
@@ -2984,6 +3373,9 @@ def server(input, output, session):
 
 app = App(app_ui, server)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Shiny2.jpg">
+        </div>
         <h3>3. Вибір колонки для гістограми з pandas + plotly</h3>
         <pre><code>
 from shiny import App, ui, render
@@ -3007,6 +3399,9 @@ def server(input, output, session):
 
 app = App(app_ui, server)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Shiny3.jpg">
+        </div>
         <h3>4. Динамічне оновлення діаграми з вибором країни</h3>
         <pre><code>
 from shiny import App, ui, render
@@ -3030,6 +3425,9 @@ def server(input, output, session):
 
 app = App(app_ui, server)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Shiny4.jpg">
+        </div>
         <h3>5. Таблиця з фільтрацією по року</h3>
         <pre><code>
 from shiny import App, ui, render
@@ -3051,10 +3449,11 @@ def server(input, output, session):
 
 app = App(app_ui, server)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Shiny5.jpg">
+        </div>
 
-    <h2>Комп'ютерний зір і обробка зображень: OpenCV</h2>
-    <article>
+    <h2 id="Computer Vision">Комп'ютерний зір і обробка зображень: OpenCV</h2>
         <h3>1. Завантаження та показ зображення</h3>
         <pre><code>
 import cv2
@@ -3133,30 +3532,56 @@ else:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
         </code></pre>
-        <h3>5. Малювання прямокутника на зображенні</h3>
+        <h3>5. Face ID</h3>
         <pre><code>
 import cv2
 import os
 
-filename = "image.jpg"
-folder = r"E:\NewFolder"
-path = os.path.join(folder, filename)
+base_folder_path = r"E:\NewFolder"
 
-img = cv2.imread(path)
+cascade_filename = "haarcascade_frontalface_default.xml"
+cascade_path = os.path.join(base_folder_path, cascade_filename)
+
+if not os.path.exists(cascade_path):
+    print(f"Помилка: Файл Haar Cascade '{cascade_filename}' не знайдено за шляхом: {cascade_path}")
+    print("Будь ласка, переконайтеся, що файл існує за вказаним шляхом.")
+    exit()
+
+face_cascade = cv2.CascadeClassifier(cascade_path)
+
+if face_cascade.empty():
+    print(f"Помилка: Не вдалося завантажити класифікатор Haar Cascade з '{cascade_path}'.")
+    print("Перевірте, чи файл не пошкоджений.")
+    exit()
+
+image_filename = "face.jpg"
+image_path = os.path.join(base_folder_path, image_filename)
+
+if not os.path.exists(image_path):
+    print(f"Помилка: Файл зображення '{image_path}' не знайдено.")
+    print("Будь ласка, переконайтеся, що шлях правильний і файл існує.")
+    exit()
+
+img = cv2.imread(image_path)
 
 if img is None:
-    print("Error: File not found or incorrect path!")
-else:
-    start_point = (5, 5)
-    end_point = (217, 220)
-    color = (0, 25, 0)
-    thickness = 3
-    img_rect = cv2.rectangle(img.copy(), start_point, end_point, color, thickness)
+    print(f"Помилка: Не вдалося завантажити зображення з '{image_path}'.")
+    print("Можливо, файл пошкоджений, має неправильний формат або немає дозволів на читання.")
+    exit()
 
-    cv2.imshow('Original', img)
-    cv2.imshow('Rectangle', img_rect)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+
+if len(faces) == 0:
+    print("Обличчя не знайдено на зображенні.")
+else:
+    for (x, y, w, h) in faces:
+        cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+
+cv2.imshow("Faces", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
         </code></pre>
     </article>
 
@@ -3674,7 +4099,7 @@ for i, (id, label, score) in enumerate(decoded):
         </code></pre>
     </article>
 
-    <h2>Графічні інтерфейси користувача (GUI): Tkinter</h2>
+    <h2 id="GUI">Графічні інтерфейси користувача (GUI): Tkinter</h2>
     <article>
         <h3>1. Просте вікно з кнопкою</h3>
         <pre><code>
@@ -4365,7 +4790,7 @@ Gtk.main()
         </code></pre>
     </article>
 
-    <h2>Наукова візуалізація: Matplotlib</h2>
+    <h2 id="Visualization">Наукова візуалізація: Matplotlib</h2>
     <article>
         <h3>1. Кілька функцій на одному графіку</h3>
         <pre><code>
@@ -4733,7 +5158,7 @@ plt.close()
         </code></pre>
     </article>
 
-    <h2>Графіка для ігор: Pygame</h2>
+    <h2 id="Game Graphics">Графіка для ігор: Pygame</h2>
     <article>
         <h3>1. 2D платформер з гравітацією, анімацією та колізією</h3>
         <pre><code>
@@ -6181,7 +6606,7 @@ if __name__ == "__main__":
         </code></pre>
     </article>
 
-    <h2>Спеціалізовані бібліотеки: Manim</h2>
+    <h2 id="Specialized Libraries">Спеціалізовані бібліотеки: Manim</h2>
     <article>
         <h3>1. Геометрія з анімацією</h3>
         <pre><code>
@@ -6720,7 +7145,7 @@ bpy.context.scene.camera = cam
         </code></pre>
     </article>
 
-    <h2>Анімація: Manim</h2>
+    <h2 id="Animation">Анімація: Manim</h2>
     <article>
         <h3>1. Анімація руху вектора по колу</h3>
         <pre><code>
@@ -6872,7 +7297,7 @@ print("wave.gif")
         </code></pre>
     </article>
 
-    <h2>Інші: Cairo</h2>
+    <h2 id="Other">Інші: Cairo</h2>
     <article>
         <h3>1. Побудова кола, прямокутника та тексту</h3>
         <pre><code> 
@@ -7053,6 +7478,7 @@ dwg.save()
 print("example2_grid_wave.svg")
         </code></pre>
     </article>
+</div>
 </section>
 
 
