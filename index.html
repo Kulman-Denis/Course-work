@@ -222,7 +222,7 @@
             <li><strong>Графіка для ігор:</strong> Pygame, Pyglet, Arcade, Cocos2d</li>
             <li><strong>Спеціалізовані бібліотеки:</strong> Manim, Basemap, Cartopy, Folium, Blender Python API</li>
             <li><strong>Анімація:</strong> Manim, Matplotlib.animation, Pillow (GIF-анімація)</li>
-            <li><strong>Інші:</strong> Cairo, Aggdraw, SVGwrite, WeasyPrint</li>
+            <li><strong>Інші:</strong> Cairo, Aggdraw, SVGwrite</li>
         </ul>
 
         <h1>2D Графік</h1>
@@ -1694,7 +1694,6 @@ plot.show()
         </div>
     
     <h2>Приклади 2D Графіки: Altair</h2>
-    <article>
         <h3>1. Лінійний графік</h3>
         <pre><code>
 import altair as alt
@@ -1886,7 +1885,6 @@ chart.save("chart.html")
         </div>
     
     <h2>Приклади 2D Графіки: Chartify</h2>
-    <article>
         <h3>1. Лінійний графік (Line Plot)</h3>
         <pre><code>
 import chartify
@@ -2545,7 +2543,6 @@ if __name__ == '__main__':
         </div>
 
     <h2>Приклади 3D Візуалізації: VTK</h2>
-    <article>
         <h3>1. 3D Точки (Scatter 3D)</h3>
         <pre><code>
 import vtk
@@ -2777,7 +2774,6 @@ interactor.Start()
         </div>
 
     <h2>Приклади 3D Візуалізації: Matplotlib (3D)</h2>
-    <article>
         <h3>1. 3D Точка (Scatter 3D)</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -2928,7 +2924,6 @@ plotter.show()
         </div>
 
     <h2 id="Dashboards">Приклади Інтерактивної Графіки та Дашбордів: Dash</h2>
-    <article>
         <h3>1. Лінійний графік з вибором країни</h3>
         <pre><code>
 import dash
@@ -3472,6 +3467,9 @@ else:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
         </code></pre>
+        <div class="example-image">
+            <img src="images/OpenCV1.jpg">
+        </div>
         <h3>2. Перетворення в чорно-біле</h3>
         <pre><code>
 import cv2
@@ -3492,6 +3490,9 @@ else:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
         </code></pre>
+        <div class="example-image">
+            <img src="images/OpenCV2.jpg">
+        </div>
         <h3>3. Розмите та оригінальне зображення</h3>
         <pre><code>
 import cv2
@@ -3512,6 +3513,9 @@ else:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
         </code></pre>
+        <div class="example-image">
+            <img src="images/OpenCV3.jpg">
+        </div>
         <h3>4. Детекція країв (Canny Edge Detection)</h3>
         <pre><code>
 import cv2
@@ -3532,6 +3536,9 @@ else:
     cv2.waitKey(0)
     cv2.destroyAllWindows()
         </code></pre>
+        <div class="example-image">
+            <img src="images/OpenCV4.jpg">
+        </div>
         <h3>5. Face ID</h3>
         <pre><code>
 import cv2
@@ -3583,10 +3590,11 @@ cv2.imshow("Faces", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/OpenCV5.jpg">
+        </div>
 
     <h2>Комп'ютерний зір і обробка зображень: Pillow (PIL)</h2>
-    <article>
         <h3>1. Завантаження та відображення зображення</h3>
         <pre><code>
 from PIL import Image
@@ -3602,6 +3610,9 @@ try:
 except FileNotFoundError:
     print("Error: File not found or incorrect path!")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pillow PIL1.jpg">
+        </div>
         <h3>2. Перетворення в чорно-білий режим (Grayscale)</h3>
         <pre><code>
 from PIL import Image
@@ -3618,6 +3629,9 @@ try:
 except FileNotFoundError:
     print("Error: File not found or incorrect path!")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pillow PIL2.jpg">
+        </div>
         <h3>3. Обрізання частини зображення (Crop)</h3>
         <pre><code>
 from PIL import Image
@@ -3634,6 +3648,9 @@ try:
 except FileNotFoundError:
     print("Error: File not found or incorrect path!")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pillow PIL3.jpg">
+        </div>
         <h3>4. Зміна розміру зображення (Resize)</h3>
         <pre><code>
 from PIL import Image
@@ -3650,6 +3667,9 @@ try:
 except FileNotFoundError:
     print("Error: File not found or incorrect path!")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pillow PIL4.jpg">
+        </div>
         <h3>5. Поворот зображення (Rotate)</h3>
         <pre><code>
 from PIL import Image
@@ -3666,10 +3686,11 @@ try:
 except FileNotFoundError:
     print("Error: File not found or incorrect path!")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Pillow PIL5.jpg">
+        </div>
 
     <h2>Комп'ютерний зір і обробка зображень: scikit-image</h2>
-    <article>
         <h3>1. Завантаження і показ зображення</h3>
         <pre><code>
 from skimage.io import imread, imshow
@@ -3684,6 +3705,9 @@ plt.title("Зображення")
 plt.axis('off')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/scikit-image1.png">
+        </div>
         <h3>2. Перетворення в чорно-біле</h3>
         <pre><code>
 from skimage.color import rgb2gray
@@ -3700,6 +3724,9 @@ plt.title("Grayscale")
 plt.axis('off')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/scikit-image2.png">
+        </div>
         <h3>3. Обрізка зображення</h3>
         <pre><code>
 from skimage.io import imread
@@ -3715,6 +3742,9 @@ plt.title("Обрізане зображення")
 plt.axis('off')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/scikit-image3.png">
+        </div>
         <h3>4. Зміна розміру зображення</h3>
         <pre><code>
 from skimage.transform import resize
@@ -3731,6 +3761,9 @@ plt.title("Змінене зображення")
 plt.axis('off')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/scikit-image4.png">
+        </div>
         <h3>5. Фільтрація (розмиття) зображення</h3>
         <pre><code>
 from skimage.io import imread
@@ -3747,10 +3780,11 @@ plt.title("Розмите зображення")
 plt.axis('off')
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/scikit-image5.png">
+        </div>
 
     <h2>Комп'ютерний зір і обробка зображень: Imageio</h2>
-    <article>
         <h3>1. Завантаження і показ зображення</h3>
         <pre><code>
 import imageio.v3 as iio
@@ -3765,6 +3799,9 @@ plt.title("Зображення")
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Imageioe1.png">
+        </div>
         <h3>2. Збереження нового зображення</h3>
         <pre><code>
 import imageio.v3 as iio
@@ -3791,6 +3828,9 @@ axs[1].axis("off")
 plt.tight_layout()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Imageioe2.png">
+        </div>
         <h3>3. Читання кадрів з GIF</h3>
         <pre><code>
 import imageio.v3 as iio
@@ -3807,6 +3847,9 @@ plt.show()
 
 print("Кількість кадрів:", len(frames)) 
         </code></pre>
+        <div class="example-image">
+            <img src="images/Imageioe3.png">
+        </div>
         <h3>4. Запис відео з кількох зображень</h3>
         <pre><code>
 import imageio.v3 as iio
@@ -3832,6 +3875,9 @@ print(f"Відео збережено: {output_path}")
 
 os.startfile(output_path)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Imageioe4.jpg">
+        </div>
         <h3>5. Читання відео покадрово</h3>
         <pre><code>
 import imageio.v3 as iio
@@ -3853,10 +3899,11 @@ for i, frame in enumerate(frames):
 
 plt.close()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Imageioe5.png">
+        </div>
 
     <h2>Комп'ютерний зір і обробка зображень: PyTorch Vision</h2>
-    <article>
         <h3>1. Завантаження зображення та перетворення в тензор</h3>
         <pre><code>
 from torchvision import transforms, models
@@ -3877,6 +3924,9 @@ plt.title("Tensor Image")
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyTorch1.png">
+        </div>
         <h3>2. Попередня обробка зображення з кількома перетвореннями</h3>
         <pre><code>
 from torchvision import transforms
@@ -3913,6 +3963,9 @@ plt.title("Оброблене зображення")
 plt.axis("off")
 plt.show() 
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyTorch2.png">
+        </div>
         <h3>3. Класифікація зображення за допомогою ResNet-18</h3>
         <pre><code>
 from torchvision import transforms, models
@@ -3954,6 +4007,9 @@ plt.title("Image for Classification")
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyTorch3.jpg">
+        </div>
         <h3>4. Застосування фільтра Sobel до тензора</h3>
         <pre><code>
 from torchvision import transforms
@@ -3976,6 +4032,9 @@ plt.title("Grayscale Image")
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyTorch4.png">
+        </div>
         <h3>5. Аугментація зображення — випадковий поворот, горизонтальне дзеркалення</h3>
         <pre><code>
 from torchvision import transforms
@@ -4002,10 +4061,11 @@ axs[1].axis("off")
 plt.tight_layout()
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/PyTorch5.png">
+        </div>
 
     <h2>Комп'ютерний зір і обробка зображень: TensorFlow Image</h2>
-    <article>
         <h3>1. Завантаження та відображення зображення</h3>
         <pre><code>
 import tensorflow as tf
@@ -4020,6 +4080,9 @@ plt.title("Завантажене зображення")
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/TensorFlow1.png">
+        </div>
         <h3>2. Масштабування та нормалізація зображення</h3>
         <pre><code>
 import tensorflow as tf
@@ -4037,6 +4100,9 @@ plt.title("Масштабоване і нормалізоване зображе
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/TensorFlow2.png">
+        </div>
         <h3>3. Аугментація зображення</h3>
         <pre><code>
 import tensorflow as tf
@@ -4054,6 +4120,9 @@ plt.title("Аугментоване зображення")
 plt.axis("off")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/TensorFlow3.png">
+        </div>
         <h3>4. Підготовка зображення для моделі MobileNetV2</h3>
         <pre><code>
 import tensorflow as tf
@@ -4073,6 +4142,9 @@ input_tensor = tf.expand_dims(input_tensor, axis=0)
 
 print("Форма тензора:", input_tensor.shape)
         </code></pre>
+        <div class="example-image">
+            <img src="images/TensorFlow4.jpg">
+        </div>
         <h3>5. Класифікація зображення з MobileNetV2</h3>
         <pre><code>
 import tensorflow as tf
@@ -4097,10 +4169,11 @@ decoded = decode_predictions(preds, top=3)[0]
 for i, (id, label, score) in enumerate(decoded):
     print(f"{i+1}. {label}: {score:.2%}")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/TensorFlow5.jpg">
+        </div>
 
     <h2 id="GUI">Графічні інтерфейси користувача (GUI): Tkinter</h2>
-    <article>
         <h3>1. Просте вікно з кнопкою</h3>
         <pre><code>
 import tkinter as tk
@@ -4119,6 +4192,9 @@ btn.pack()
 
 root.mainloop()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Tkinter1.jpg">
+        </div>
         <h3>2. Текстове поле та введення користувача</h3>
         <pre><code>
 import tkinter as tk
@@ -4141,6 +4217,9 @@ label.pack()
 
 root.mainloop() 
         </code></pre>
+        <div class="example-image">
+            <img src="images/Tkinter2.jpg">
+        </div>
         <h3>3. Обробка подій миші</h3>
         <pre><code>
 import tkinter as tk
@@ -4160,6 +4239,9 @@ label.pack()
 
 root.mainloop() 
         </code></pre>
+        <div class="example-image">
+            <img src="images/Tkinter3.jpg">
+        </div>
         <h3>4. Створення меню</h3>
         <pre><code>
 import tkinter as tk
@@ -4186,6 +4268,9 @@ label.pack(pady=20)
 
 root.mainloop() 
         </code></pre>
+        <div class="example-image">
+            <img src="images/Tkinter4.jpg">
+        </div>
         <h3>5. Слайдер для вибору значення</h3>
         <pre><code>
 import tkinter as tk
@@ -4204,10 +4289,11 @@ label.pack()
 
 root.mainloop() 
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Tkinter5.jpg">
+        </div>
 
     <h2>Графічні інтерфейси користувача (GUI): PyQt / PySide</h2>
-    <article>
         <h3>1. Просте вікно з кнопкою</h3>
         <pre><code>
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout
@@ -4232,6 +4318,9 @@ window.setLayout(layout)
 window.show()
 sys.exit(app.exec_())
         </code></pre>
+        <div class="example-image">
+            <img src="images/PySide1.jpg">
+        </div>
         <h3>2. Ввід тексту (QLineEdit)</h3>
         <pre><code>
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QLabel, QPushButton, QVBoxLayout
@@ -4259,6 +4348,9 @@ window.setLayout(layout)
 window.show()
 sys.exit(app.exec_())
         </code></pre>
+        <div class="example-image">
+            <img src="images/PySide2.jpg">
+        </div>
         <h3>3. Завантаження зображення</h3>
         <pre><code>
 from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout
@@ -4280,6 +4372,9 @@ window.setLayout(layout)
 window.show()
 sys.exit(app.exec_())
         </code></pre>
+        <div class="example-image">
+            <img src="images/PySide3.jpg">
+        </div>
         <h3>4. Повідомлення (Message Box)</h3>
         <pre><code>
 from PyQt5.QtWidgets import QApplication, QMessageBox, QWidget, QPushButton, QVBoxLayout
@@ -4302,6 +4397,9 @@ window.setLayout(layout)
 window.show()
 sys.exit(app.exec_())
         </code></pre>
+        <div class="example-image">
+            <img src="images/PySide4.jpg">
+        </div>
         <h3>5. Слайдер (QSlider)</h3>
         <pre><code>
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QSlider, QVBoxLayout
@@ -4330,10 +4428,11 @@ window.setLayout(layout)
 window.show()
 sys.exit(app.exec_())
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/PySide5.jpg">
+        </div>
 
     <h2>Графічні інтерфейси користувача (GUI): Kivy</h2>
-    <article>
         <h3>1. Кнопка + Лейбл + лічильник</h3>
         <pre><code>
 from kivy.app import App
@@ -4359,6 +4458,9 @@ class MyApp(App):
 
 MyApp().run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Kivy1.jpg">
+        </div>
         <h3>2. Перемикачі (Radio Button / ToggleButton)</h3>
         <pre><code>
 from kivy.app import App
@@ -4384,6 +4486,9 @@ class MyApp(App):
 
 MyApp().run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Kivy2.jpg">
+        </div>
         <h3>3. Чекбокси</h3>
         <pre><code>
 from kivy.app import App
@@ -4408,6 +4513,9 @@ class MyApp(App):
 
 MyApp().run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Kivy3.jpg">
+        </div>
         <h3>4. Слайдер (Slider)</h3>
         <pre><code>
 from kivy.app import App
@@ -4431,6 +4539,9 @@ class MyApp(App):
 
 MyApp().run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Kivy4.jpg">
+        </div>
         <h3>5. Вивід спливаючого повідомлення (Popup)</h3>
         <pre><code>
 from kivy.app import App
@@ -4455,10 +4566,11 @@ class MyApp(App):
 
 MyApp().run()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Kivy5.jpg">
+        </div>
 
     <h2>Графічні інтерфейси користувача (GUI): wxPython</h2>
-    <article>
         <h3>1. Вікно з кількома кнопками</h3>
         <pre><code>
 import wx
@@ -4490,6 +4602,9 @@ frame = CounterApp()
 frame.Show()
 app.MainLoop()
         </code></pre>
+        <div class="example-image">
+            <img src="images/wxPython1.jpg">
+        </div>
         <h3>2. Програма з вкладками (Notebook)</h3>
         <pre><code>
 import wx
@@ -4513,6 +4628,9 @@ frame = TabApp()
 frame.Show()
 app.MainLoop()
         </code></pre>
+        <div class="example-image">
+            <img src="images/wxPython2.jpg">
+        </div>
         <h3>3. Завантаження зображення та його показ</h3>
         <pre><code>
 import wx
@@ -4546,6 +4664,9 @@ frame = ImageViewer()
 frame.Show()
 app.MainLoop()
         </code></pre>
+        <div class="example-image">
+            <img src="images/wxPython3.jpg">
+        </div>
         <h3>4. Ввід, обробка тексту і збереження у файл</h3>
         <pre><code>
 import wx
@@ -4580,6 +4701,9 @@ frame = TextEditor()
 frame.Show()
 app.MainLoop()
         </code></pre>
+        <div class="example-image">
+            <img src="images/wxPython4.jpg">
+        </div>
         <h3>5. Програма з Progress Bar</h3>
         <pre><code>
 import wx
@@ -4610,7 +4734,9 @@ frame = ProgressBarFrame()
 frame.Show()
 app.MainLoop()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/wxPython5.jpg">
+        </div>
 
     <h2>Графічні інтерфейси користувача (GUI): PyGTK</h2>
     <article>
@@ -4646,6 +4772,9 @@ win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyGTK1.jpg">
+        </div>
         <h3>2. Таблиця зі списком (TreeView)</h3>
         <pre><code>
 import gi
@@ -4678,6 +4807,9 @@ win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyGTK2.jpg">
+        </div>
         <h3>3. Вибір файлу та відображення імені</h3>
         <pre><code>
 import gi
@@ -4720,6 +4852,9 @@ win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyGTK3.jpg">
+        </div>
         <h3>4. Перемикачі (ToggleButton) + логіка</h3>
         <pre><code>
 import gi
@@ -4758,6 +4893,9 @@ win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
         </code></pre>
+        <div class="example-image">
+            <img src="images/PyGTK4.jpg">
+        </div>
         <h3>5. Вікно з прогрес-баром (імітація процесу)</h3>
         <pre><code>
 import gi
@@ -4781,17 +4919,18 @@ class ProgressBarExample(Gtk.Window):
             new_val = 0.0
         self.progressbar.set_fraction(new_val)
         self.progressbar.set_text(f"{int(new_val * 100)}%")
-        return True  # щоб не зупиняти таймер
+        return True
 
 win = ProgressBarExample()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/PyGTK5.jpg">
+        </div>
 
     <h2 id="Visualization">Наукова візуалізація: Matplotlib</h2>
-    <article>
         <h3>1. Кілька функцій на одному графіку</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -4813,6 +4952,9 @@ plt.legend()
 plt.grid(True)
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib_1.png">
+        </div>
         <h3>2. Гістограма з нормальним розподілом</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -4828,6 +4970,9 @@ plt.ylabel('Щільність ймовірності')
 plt.grid(True)
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib_2.png">
+        </div>
         <h3>3. Теплова карта (heatmap)</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -4841,6 +4986,9 @@ plt.colorbar(label="Інтенсивність")
 plt.title('Теплова карта')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib_3.png">
+        </div>
         <h3>4. 3D-поверхня</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -4860,6 +5008,9 @@ fig.colorbar(surf, ax=ax, shrink=0.5, aspect=10)
 ax.set_title('3D поверхня: sin(√(x² + y²))')
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib_4.png">
+        </div>
         <h3>5. Векторне поле (Quiver plot)</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -4880,10 +5031,11 @@ plt.grid(True)
 plt.axis('equal')
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Matplotlib_5.png">
+        </div>
 
     <h2>Наукова візуалізація: Mayavi</h2>
-    <article>
         <h3>1. 3D-поверхня (mesh surface)</h3>
         <pre><code>
 from mayavi import mlab
@@ -4896,6 +5048,9 @@ mlab.surf(x, y, z, colormap='Spectral')
 mlab.title("3D-surface: sin(x² + y²)")
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi_1.png">
+        </div>
         <h3>2. Об'ємна візуалізація (volume rendering)</h3>
         <pre><code>
 from mayavi import mlab
@@ -4909,6 +5064,9 @@ mlab.pipeline.volume(src)
 mlab.title("Volumetric visualization")
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi_2.png">
+        </div>
         <h3>3. Векторне поле (візуалізація потоків)</h3>
         <pre><code>
 from mayavi import mlab
@@ -4923,6 +5081,9 @@ mlab.quiver3d(x, y, z, u, v, w, scale_factor=0.5)
 mlab.title("Vector field")
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi_3.png">
+        </div>
         <h3>4. Contour3D (ізолінії в 3D)</h3>
         <pre><code>
 from mayavi import mlab
@@ -4935,6 +5096,9 @@ mlab.contour3d(scalars, contours=8, opacity=0.5)
 mlab.title("Contour3D: sin(x*y*z)")
 mlab.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Mayavi_4.png">
+        </div>
         <h3>5. Parametric 3D-спіраль</h3>
         <pre><code>
 from mayavi import mlab
@@ -4949,10 +5113,11 @@ mlab.plot3d(x, y, z, t, tube_radius=0.05, colormap='Accent')
 mlab.title("3D-spiral")
 mlab.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Mayavi_5.png">
+        </div>
 
     <h2>Наукова візуалізація: SciPy Visualization</h2>
-    <article>
         <h3>1. Візуалізація рішення диференціального рівняння (ODE)</h3>
         <pre><code>
 import numpy as np
@@ -4972,29 +5137,34 @@ plt.grid()
 plt.legend()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Visualization1.png">
+        </div>
         <h3>2. 2D-фур'є-аналіз зображення + спектр</h3>
         <pre><code>
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.fft import fft2, fftshift
-from scipy.misc import face
+from scipy import ndimage
 
-img = face(gray=True)[::4, ::4]
+img = np.zeros((256, 256))
+img[64:-64, 64:-64] = 255
+img = ndimage.gaussian_filter(img, sigma=10)
 
-fft_image = fftshift(fft2(img))
-magnitude = np.log(np.abs(fft_image) + 1)
+rotated = ndimage.rotate(img, 45)
 
-plt.figure(figsize=(12, 5))
+plt.figure(figsize=(10, 5))
 plt.subplot(1, 2, 1)
-plt.imshow(img, cmap='gray')
-plt.title("Оригінальне зображення")
-
+plt.title("Original")
+plt.imshow(img, cmap="gray")
 plt.subplot(1, 2, 2)
-plt.imshow(magnitude, cmap='inferno')
-plt.title("Спектр (FFT)")
-plt.colorbar()
+plt.title("Rotated")
+plt.imshow(rotated, cmap="gray")
+plt.tight_layout()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Visualization2.png">
+        </div>
         <h3>3. Інтерполяція функції методом кубічних сплайнів</h3>
         <pre><code>
 import numpy as np
@@ -5015,6 +5185,9 @@ plt.title("Інтерполяція функції")
 plt.grid()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Visualization3.png">
+        </div>
         <h3>4. 3D-візуалізація функції (SciPy + matplotlib)</h3>
         <pre><code>
 import numpy as np
@@ -5032,6 +5205,9 @@ fig.colorbar(surf)
 ax.set_title("3D-графік функції: sin(sqrt(x² + y²))")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Visualization4.png">
+        </div>
         <h3>5. Карта рівнів потенціалу (рішення рівняння Лапласа)</h3>
         <pre><code>
 import numpy as np
@@ -5054,10 +5230,11 @@ plt.colorbar(label="Потенціал")
 plt.title("Карта потенціалу (Лаплас)")
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Visualization5.png">
+        </div>
 
     <h2>Наукова візуалізація: Cartopy</h2>
-    <article>
         <h3>1. Глобальна карта з різними проекціями</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -5075,6 +5252,11 @@ for i, proj in enumerate(projections):
     plt.savefig(f"map_projection_{i}.png")
     plt.close()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cartopy0.png">
+            <img src="images/Cartopy01.png">
+            <img src="images/Cartopy02.png">
+        </div>
         <h3>2. Відображення траєкторії супутника над Землею</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -5095,6 +5277,9 @@ ax.legend()
 plt.savefig("satellite_path.png")
 plt.close()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cartopy2.png">
+        </div>
         <h3>3. Теплова карта температур на світовій мапі</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -5115,6 +5300,9 @@ plt.colorbar(cf, ax=ax, orientation='horizontal')
 plt.savefig("temperature_map.png")
 plt.close()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cartopy3.png">
+        </div>
         <h3>4. Потік вітру: векторне поле на карті</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -5136,6 +5324,9 @@ ax.set_title("Векторне поле вітру")
 plt.savefig("wind_field.png")
 plt.close()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cartopy4.png">
+        </div>
         <h3>5. Виділення окремої країни</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -5156,10 +5347,11 @@ ax.set_title("Карта України")
 plt.savefig("ukraine_map.png")
 plt.close()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Cartopy5.png">
+        </div>
 
     <h2 id="Game Graphics">Графіка для ігор: Pygame</h2>
-    <article>
         <h3>1. 2D платформер з гравітацією, анімацією та колізією</h3>
         <pre><code>
 import pygame
@@ -5219,6 +5411,9 @@ while run:
 
 pygame.quit()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pygame1.jpg">
+        </div>
         <h3>2. Гравець і AI переслідувач</h3>
         <pre><code>
 import pygame
@@ -5261,6 +5456,9 @@ while running:
     clock.tick(60)
 pygame.quit()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pygame2.jpg">
+        </div>
         <h3>3. Гра-музикальна реакція – Блок стрибає по нотах</h3>
         <pre><code>
 import pygame
@@ -5316,10 +5514,11 @@ while running:
 
 pygame.quit()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Pygame3.jpg">
+        </div>
 
     <h2>Графіка для ігор: Pyglet</h2>
-    <article>
         <h3>1. Pyglet + OpenGL: 3D-сцена з керуванням камерою</h3>
         <pre><code>
 import pyglet
@@ -5526,6 +5725,9 @@ glClearColor(0.1, 0.1, 0.1, 1.0)
 pyglet.clock.schedule(update)
 pyglet.app.run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pyglet1.jpg">
+        </div>
         <h3>2. RTS-гра (Real-Time Strategy) створенням юнітів і простим AI</h3>
         <pre><code>
 import pyglet
@@ -5657,6 +5859,9 @@ def update(dt):
 pyglet.clock.schedule_interval(update, 1 / 60.0)
 pyglet.app.run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pyglet2.jpg">
+        </div>
         <h3>3. Ритм-гра в стилі “Guitar Hero”</h3>
         <pre><code>
 import pyglet
@@ -5757,10 +5962,11 @@ pyglet.clock.schedule_interval(spawn_note, 1.0)
 
 pyglet.app.run()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Pyglet3.jpg">
+        </div>
 
     <h2>Графіка для ігор: Arcade</h2>
-    <article>
         <h3>1. Shoot'em up — гра в стилі космічного шутера</h3>
         <pre><code>
 import arcade
@@ -5908,6 +6114,9 @@ if __name__ == "__main__":
     game.setup()
     arcade.run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Arcade1.jpg">
+        </div>
         <h3>2. Tower Defense</h3>
         <pre><code>
 import arcade
@@ -6100,6 +6309,9 @@ if __name__ == "__main__":
     game = TowerDefenseGame()
     arcade.run()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Arcade2.jpg">
+        </div>
         <h3>3. Платформер з гравітацією</h3>
         <pre><code>
 import arcade
@@ -6219,10 +6431,11 @@ if __name__ == "__main__":
     game.setup()
     arcade.run()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Arcade3.jpg">
+        </div>
 
     <h2>Графіка для ігор: Cocos2d</h2>
-    <article>
         <h3>1. 2D-пригода з декількома сценами</h3>
         <pre><code>
 import cocos
@@ -6266,7 +6479,6 @@ class RoomLayer(cocos.layer.Layer):
         self.in_dialog = False
 
         if has_npc:
-            # ВИПРАВЛЕННЯ: Змінено на "npc.jpg"
             self.npc = cocos.sprite.Sprite("npc.jpg", position=(600, 100))
             self.add(self.npc)
         else:
@@ -6355,6 +6567,10 @@ def main():
 if __name__ == "__main__":
     main()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cocos2d1.jpg">
+            <img src="images/Cocos2d01.jpg">
+        </div>
         <h3>2. Гра "Змійка" (Snake)</h3>
         <pre><code>
 import cocos
@@ -6477,6 +6693,9 @@ def main():
 if __name__ == "__main__":
     main()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cocos2d2.jpg">
+        </div>
         <h3>3. Flappy Bird</h3>
         <pre><code>
 import cocos
@@ -6604,10 +6823,11 @@ def main():
 if __name__ == "__main__":
     main()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Cocos2d3.jpg">
+        </div>
 
     <h2 id="Specialized Libraries">Спеціалізовані бібліотеки: Manim</h2>
-    <article>
         <h3>1. Геометрія з анімацією</h3>
         <pre><code>
 from manim import *
@@ -6631,6 +6851,9 @@ class GeometryScene(Scene):
 
         self.play(FadeOut(circle))
         </code></pre>
+        <div class="example-image">
+            <img src="images/Manim1.jpg">
+        </div>
         <h3>2. побудова графіка функції f(x) = sin(x)</h3>
         <pre><code>
 from manim import *
@@ -6663,6 +6886,9 @@ class SineGraph(Scene):
         self.wait(1)
         self.play(FadeOut(graph), FadeOut(dot), FadeOut(tracer), FadeOut(x_label), FadeOut(y_label))
         </code></pre>
+        <div class="example-image">
+            <img src="images/Manim2.jpg">
+        </div>
         <h3>3. Лінійне перетворення векторів</h3>
         <pre><code>
 from manim import *
@@ -6691,10 +6917,11 @@ class LinearTransformScene(Scene):
         self.play(ApplyMatrix(matrix, v1), ApplyMatrix(matrix, v2), run_time=2)
         self.wait(2)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Manim3.jpg">
+        </div>
 
     <h2>Спеціалізовані бібліотеки: Basemap</h2>
-    <article>
         <h3>1. Світова карта з містами</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -6726,6 +6953,9 @@ plt.title("Світова карта з основними містами")
 plt.tight_layout()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Basemap1.png">
+        </div>
         <h3>2. Температурна картограма</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -6773,6 +7003,9 @@ plt.colorbar(sm, cax=cax, label="Температура, °C")
 plt.title("Картограма температур по містах світу")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Basemap2.png">
+        </div>
         <h3>3. Геодезична траєкторія польоту</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -6806,10 +7039,11 @@ plt.title("Геодезична траєкторія польоту: Київ �
 plt.tight_layout()
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Basemap3.png">
+        </div>
 
     <h2>Спеціалізовані бібліотеки: Cartopy</h2>
-    <article>
         <h3>1. Базова світова карта</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -6834,6 +7068,9 @@ plt.title("Базова світова карта з Cartopy")
 plt.tight_layout()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cartopy_1.png">
+        </div>
         <h3>2. Траєкторія польоту Київ → Токіо</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -6886,6 +7123,9 @@ plt.title("Траєкторія польоту: Київ \u2192 Токіо (ге
 plt.tight_layout()
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cartopy_2.png">
+        </div>
         <h3>3. Візуалізація землетрусів</h3>
         <pre><code>
 import matplotlib.pyplot as plt
@@ -6935,10 +7175,11 @@ plt.title("Карта землетрусів (псевдо-дані)")
 plt.tight_layout()
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Cartopy_3.png">
+        </div>
     
     <h2>Спеціалізовані бібліотеки: Folium</h2>
-    <article>
         <h3>1. Базова інтерактивна карта з маркерами</h3>
         <pre><code>
 import folium
@@ -6963,6 +7204,9 @@ for name, lat, lon, desc in cities:
 my_map.save("map_with_markers.html")
 print('map_with_markers.html')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Folium1.jpg">
+        </div>
         <h3>2. Теплова карта</h3>
         <pre><code>
 import folium
@@ -6986,6 +7230,9 @@ HeatMap(heat_data, radius=25, blur=15, max_zoom=6).add_to(my_map)
 my_map.save("heatmap.html")
 print('heatmap.html')
         </code></pre>
+        <div class="example-image">
+            <img src="images/Folium2.jpg">
+        </div>
         <h3>3. Маршрут на карті (GPS-траєкторія)</h3>
         <pre><code>
 import folium
@@ -7016,10 +7263,11 @@ PolyLine(locations=path_coords, color="blue", weight=5, opacity=0.7).add_to(my_m
 my_map.save("route_map.html")
 print('route_map.html')
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Folium3.jpg">
+        </div>
 
     <h2>Спеціалізовані бібліотеки: Blender Python API</h2>
-    <article>
         <h3>1. Процедурна генерація набору кубів із градієнтом</h3>
         <pre><code>
 import bpy
@@ -7059,6 +7307,9 @@ for x in range(rows):
 
             obj.data.materials.append(mat)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Blender1.jpg">
+        </div>
         <h3>2. Анімація кульки з гравітацією та відбиванням</h3>
         <pre><code>
 import bpy
@@ -7089,6 +7340,9 @@ for fcurve in ball.animation_data.action.fcurves:
     for kp in fcurve.keyframe_points:
         kp.interpolation = 'LINEAR'
         </code></pre>
+        <div class="example-image">
+            <img src="images/Blender2.jpg">
+        </div>
         <h3>3. Процедурний ландшафт з підняттям вершин (дисперсія)</h3>
         <pre><code>
 import bpy
@@ -7143,10 +7397,11 @@ cam.location = (30, -30, 20)
 cam.rotation_euler = (math.radians(60), 0, math.radians(45))
 bpy.context.scene.camera = cam
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Blender3.jpg">
+        </div>
 
     <h2 id="Animation">Анімація: Manim</h2>
-    <article>
         <h3>1. Анімація руху вектора по колу</h3>
         <pre><code>
 from manim import *
@@ -7167,6 +7422,9 @@ class RotatingVector(Scene):
         self.play(Rotate(vector, angle=2 * PI, about_point=ORIGIN), run_time=4)
         self.wait(1)
         </code></pre>
+        <div class="example-image">
+            <img src="images/Manim_1.jpg">
+        </div>
         <h3>2. Анімація з масштабуванням і переміщенням об’єкта</h3>
         <pre><code>
 from manim import *
@@ -7189,10 +7447,11 @@ class TransformShapes(Scene):
 
         self.wait(1)
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Manim_2.jpg">
+        </div>
 
     <h2>Анімація: Matplotlib.animation</h2>
-    <article>
         <h3>1. Анімація синусоїди, що рухається</h3>
         <pre><code>    
 import numpy as np
@@ -7211,9 +7470,12 @@ ani = animation.FuncAnimation(fig, update, frames=100, interval=50, blit=True)
 plt.title("Анімація синусоїди")
 plt.show()
         </code></pre>
+        <div class="example-image">
+            <img src="images/Matplotlib.animation1.png">
+        </div>
         <h3>2. Частинка, яка рухається по колу</h3>
         <pre><code>    
-        import numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
@@ -7242,10 +7504,11 @@ ani = animation.FuncAnimation(fig, update, frames=100, interval=50, blit=False)
 plt.title("Рух по колу")
 plt.show()
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Matplotlib.animation2.png">
+        </div>
 
     <h2>Анімація: Pillow (GIF-анімація)</h2>
-    <article>
         <h3>1. Рухома кулька по горизонталі</h3>
         <pre><code> 
 from PIL import Image, ImageDraw
@@ -7274,6 +7537,9 @@ for i in range(num_frames):
 frames[0].save("ball.gif", save_all=True, append_images=frames[1:], duration=40, loop=0)
 print("ball.gif")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Pillow GIF1.gif">
+        </div>
         <h3>2. Анімація кольорової хвилі</h3>
         <pre><code> 
 from PIL import Image, ImageDraw
@@ -7295,10 +7561,11 @@ for frame in range(60):
 frames[0].save("wave.gif", save_all=True, append_images=frames[1:], duration=30, loop=0)
 print("wave.gif")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Pillow GIF2.gif">
+        </div>
 
     <h2 id="Other">Інші: Cairo</h2>
-    <article>
         <h3>1. Побудова кола, прямокутника та тексту</h3>
         <pre><code> 
 import cairo
@@ -7328,6 +7595,9 @@ ctx.show_text("Hello Cairo!")
 surface.write_to_png("drawing1.png")
 print("drawing1.png")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Cairo1.png">
+        </div>
         <h3>2. Малювання спіралі</h3>
         <pre><code> 
 import cairo
@@ -7361,10 +7631,11 @@ ctx.stroke()
 surface.write_to_png("spiral.png")
 print("spiral.png")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Cairo2.png">
+        </div>
 
     <h2>Інші: Aggdraw</h2>
-    <article>
         <h3>1. Малювання фігур: коло, прямокутник і лінії</h3>
         <pre><code>
 from PIL import Image
@@ -7387,6 +7658,9 @@ draw.flush()
 img.save("aggdraw_shapes.png")
 print("aggdraw_shapes.png")
         </code></pre>
+        <div class="example-image">
+            <img src="images/Aggdraw1.png">
+        </div>
         <h3>2. Годинник з стрілками</h3>
         <pre><code>
 from PIL import Image
@@ -7433,10 +7707,11 @@ draw.flush()
 img.save("aggdraw_clock.png")
 print("aggdraw_clock.png")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/Aggdraw2.png">
+        </div>
 
     <h2>Інші: SVGwrite</h2>
-    <article>
         <h3>1. Прямокутник, коло та текст</h3>
         <pre><code>
 import svgwrite
@@ -7452,6 +7727,9 @@ dwg.add(dwg.text("Привіт, SVG!", insert=(120, 200), font_size="24px", fill
 dwg.save()
 print("example1_shapes.svg")
         </code></pre>
+        <div class="example-image">
+            <img src="images/WeasyPrint1.jpg">
+        </div>
         <h3>2. Побудова координатної сітки + синусоїда</h3>
         <pre><code>
 import svgwrite
@@ -7477,7 +7755,9 @@ dwg.add(dwg.polyline(points=points, stroke="red", fill="none", stroke_width=2))
 dwg.save()
 print("example2_grid_wave.svg")
         </code></pre>
-    </article>
+        <div class="example-image">
+            <img src="images/WeasyPrint2.jpg">
+        </div>
 </div>
 </section>
 
